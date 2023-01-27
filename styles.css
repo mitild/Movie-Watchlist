@@ -1,0 +1,305 @@
+/* ------------------
+GLOBAL STYLES
+-------------------- */
+
+*, 
+::after, 
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .5s;
+}
+
+body {
+  background-color: #0E0E0E;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: .75rem;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+/* ------------------
+HERO SECTION
+-------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: url('images/nav-bkg.png') center;
+  background-size: cover;
+  padding: 5em 1.5em;
+  text-shadow: 0 0 5px #000;
+  position: relative;
+}
+
+nav > h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+nav > a {
+  font-size: .875rem;
+  align-self: center;
+}
+
+/* ------------------
+SEARCH FORM
+-------------------- */
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -1.5em;
+  font-size: .875rem;
+  margin: auto;
+  padding: 0 2em;
+}
+
+input.search {
+  background: url('images/Icon.png') no-repeat;
+  background-position: left 3.5% top 50%;
+  background-size: 1em;
+  padding: 1em 6em 1em 2.3em;
+  background-color: #2E2E2F;
+  border: 1px solid #000;
+  border-radius: 5px 0 0 5px;
+  color: #FFF;
+}
+
+input::placeholder {
+  font-weight: 500;
+  color: #A5A5A5;
+}
+
+.submit-btn {
+  color: #FFF;
+  background-color: #4B4B4B;
+  border: 1px solid #000;
+  border-radius: 0 5px 5px 0;
+  padding: 1em 2.8em;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  color: #2E2E2F;
+  background-color: #77777a;
+}
+
+/* ------------------
+MAIN SECTION
+-------------------- */
+
+.movie-list,
+.watchlist,
+.loader-div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist {
+  margin-top: 3em;
+}
+
+#placeholder-div {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.film-placeholder {
+  width: 4.375em;
+  opacity: .1;
+  margin-bottom: 1em;
+}
+
+.text-placeholder {
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: .1;
+}
+
+.start-searching {
+  margin-top: 1em;
+  color: #FFF;
+  font-size: 1rem;
+}
+
+.loader-div {
+  justify-content: center;
+  align-items: center;
+  color: #7fffd4;
+}
+
+.loader {
+  margin-bottom: 2em;
+  width: 50px;
+}
+
+.movie-wrapper {
+  align-items: center;
+  width: 85%;
+  border-bottom: 1px solid rgba(201, 197, 197, 0.413);
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+.movie-wrapper:first-of-type {
+  margin-top: 2em;
+}
+
+.movie-info {
+  flex-direction: column;
+  min-width: 65%;
+  margin-left: 1.2em;
+}
+
+.poster {
+  max-width: 35%;
+  height: 100%;
+  box-shadow: 1px 1px 5px #151515;
+  border-radius: 5px;
+}
+
+.title-rate {
+  justify-content: space-between;
+}
+
+.rate {
+  justify-content: space-between;
+  align-items: center;
+  gap: .3em;
+}
+
+.rate-star {
+  width: 15px;
+}
+
+.duration-genre-add {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: .7em 0 1em;
+  font-size: .6rem;
+  gap: 1em;
+}
+
+.add-btn {
+  background: none;
+  border: none;
+  color: #FFF;
+  font-size: .6rem;
+}
+
+.genre {
+  max-width: 60%;
+}
+
+.add-btn:hover,
+.add-btn:focus,
+.added,
+.start-searching:hover {
+  color: #7fffd4;
+}
+
+.fa-solid {
+  padding-right: .3em;
+}
+
+.description-wrapper {
+  min-width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/* ------------------
+MEDIA QUERIES
+-------------------- */
+
+@media (min-width: 460px) {
+  body {
+    font-size: 1rem;
+  }
+
+  nav {
+    padding: 5em;
+  }
+
+  nav > h1 {
+    font-size: 2.3rem;
+  }
+
+  nav > a {
+    font-size: 1.2rem;
+  }
+
+  nav > a:hover {
+    color: #A5A5A5;
+    font-size: 1.4rem;
+  }
+
+  input.search {
+    padding: 1.3em 15em 1.3em 3.3em;
+  }
+
+  .poster {
+    max-width: 15%;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  .title-rate,
+  .duration-genre-add {
+    justify-content: start;
+    gap: 4em;
+    font-weight: 700;
+  }
+
+  .duration-genre-add {
+    margin: .8em 0 2em;
+  }
+
+  .duration-genre-add,
+  .add-btn,
+  .duration-genre-add > i {
+    font-size: .8rem;
+  }
+  
+  .description {
+    font-weight: 300;
+  }
+}
